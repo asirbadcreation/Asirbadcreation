@@ -42,27 +42,31 @@ body {
 }
 
 /* HERO BOX */
-.hero-content {
-  position: absolute;
-  top: 45%;
-  left: 8%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(12px);
-  padding: 40px;
-  border-radius: 20px;
-  width: 400px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+<div class="hero">
+  <img src="background.jpg.png" class="bg">
+
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="https://wa.me/919831102291" target="_blank">Contact</a>
+  </div>
+
+  <div class="hero-content">
+    <h1>Professional Printing Services</h1>
+    <p>We provide high-quality printing, ID cards, visiting cards, and custom branding solutions.</p>
+    <a href="products.html" class="btn">Explore Products</a>
+  </div>
+</div>
+
+  .hero {
+  position: relative;
+  width: 100%;
 }
 
-.hero-content h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  margin-bottom: 20px;
-  color: #333;
+.bg {
+  width: 100%;
+  height: auto;   /* 🔥 FULL IMAGE ALWAYS */
+  display: block;
 }
 
 /* BUTTON */
