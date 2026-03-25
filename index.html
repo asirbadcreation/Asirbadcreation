@@ -11,21 +11,30 @@
       background: #ffffff;
     }
 
-    /* HERO BACKGROUND ONLY */
+    /* HERO WITH YOUR BACKGROUND */
     .hero {
-      background: url('background.jpg') no-repeat center/cover;
-      position: relative;
+      background: url("background.jpg") center/cover no-repeat;
       padding: 120px 20px 100px;
       text-align: center;
-      color: #111;
+      position: relative;
     }
 
-  
+    /* LIGHT OVERLAY (so image visible) */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.35); /* IMPORTANT */
+      z-index: 0;
+    }
+
+    /* KEEP CONTENT ABOVE OVERLAY */
     .hero-content {
       position: relative;
       z-index: 1;
     }
 
+    /* HEADER */
     header {
       position: absolute;
       top: 0;
@@ -39,7 +48,7 @@
     }
 
     header img {
-      width: 50px;
+      width: 55px;
       border-radius: 50%;
     }
 
@@ -48,6 +57,7 @@
       font-size: 22px;
     }
 
+    /* HERO TEXT */
     .hero h2 {
       font-size: 42px;
       margin-bottom: 10px;
@@ -55,7 +65,7 @@
 
     .hero p {
       font-size: 18px;
-      color: #444;
+      color: #333;
     }
 
     .hero a {
@@ -66,14 +76,9 @@
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      transition: 0.3s;
     }
 
-    .hero a:hover {
-      background: #333;
-    }
-
-    /* TRUST STRIP */
+    /* TRUST BAR */
     .trust {
       text-align: center;
       padding: 12px;
@@ -92,13 +97,12 @@
     }
 
     .service {
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(10px);
+      background: white;
       padding: 25px;
       border-radius: 12px;
       width: 180px;
       text-align: center;
-      font-weight: 500;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
       transition: 0.3s;
     }
 
@@ -175,7 +179,7 @@
 
   <div class="hero-content">
     <h2>Print Your Mark</h2>
-    <p>Premium Printing & Branding Solutions</p>
+    <p>High-quality printing, branding & custom products</p>
     <a href="products.html">Explore Products</a>
   </div>
 
@@ -203,18 +207,23 @@
     <h3>Lanyard + ID Card</h3>
     <p class="price">₹20 / piece</p>
     <p class="min">Min: 5 pcs</p>
-    <a href="https://wa.me/919831102291?text=I want Lanyard + ID Card">Order</a>
+    <a href="https://wa.me/919831102291?text=I want Lanyard + ID Card">
+      Order
+    </a>
   </div>
 
   <div class="product">
     <h3>Visiting Card</h3>
     <p class="price">₹2 / piece</p>
     <p class="min">Min: 100 pcs</p>
-    <a href="https://wa.me/919831102291?text=I want Visiting Cards">Order</a>
+    <a href="https://wa.me/919831102291?text=I want Visiting Cards">
+      Order
+    </a>
   </div>
 
 </div>
 
+<!-- FOOTER -->
 <footer>
   <p>📞 9831102291</p>
   <p>© 2026 Asirbad Creation</p>
