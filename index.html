@@ -1,106 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Asirbad Creation</title>
+<meta charset="UTF-8">
+<title>Asirbad Creation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
+/* PARALLAX BACKGROUND */
+.hero {
+  height: 100vh;
+  background: url("background.jpg.png") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
 
-    /* FULL BACKGROUND IMAGE */
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
+/* NAVBAR */
+.nav {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+}
 
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
 
-    /* CLICKABLE AREAS */
-    .btn {
-      position: absolute;
-      display: block;
-      cursor: pointer;
-    }
+/* HERO BOX */
+.hero-content {
+  position: absolute;
+  top: 45%;
+  left: 8%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
 
-    /* NAV LINKS */
-    .home {
-      top: 3%;
-      right: 22%;
-      width: 6%;
-      height: 5%;
-    }
+.hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
 
-    .products {
-      top: 3%;
-      right: 14%;
-      width: 8%;
-      height: 5%;
-    }
+.hero-content p {
+  margin-bottom: 20px;
+  color: #333;
+}
 
-    .contact {
-      top: 3%;
-      right: 5%;
-      width: 9%;
-      height: 5%;
-    }
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
 
-    /* EXPLORE BUTTON */
-    .explore {
-      top: 48%;
-      left: 8%;
-      width: 15%;
-      height: 8%;
-    }
+.btn:hover {
+  background: #333;
+}
 
-    /* OPTIONAL HOVER EFFECT */
-    .btn:hover {
-      background: rgba(0, 0, 0, 0.08);
-      border-radius: 8px;
-    }
+/* TRUST BAR */
+.trust {
+  background: rgba(0,0,0,0.85);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+}
 
-    /* MOBILE FIX */
-    @media(max-width: 768px) {
-      .explore {
-        top: 55%;
-        left: 10%;
-        width: 35%;
-        height: 10%;
-      }
-    }
-  </style>
+/* SECTION */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.85);
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 180px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.product {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255,255,255,0.9);
+}
+</style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
 
-  <!-- YOUR BACKGROUND IMAGE -->
-  <img src="background.jpg.png" alt="Asirbad Creation Banner">
+  <!-- NAV -->
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="https://wa.me/919831102291" target="_blank">Contact</a>
+  </div>
 
-  <!-- CLICKABLE AREAS -->
-  <a href="index.html" class="btn home"></a>
-  <a href="products.html" class="btn products"></a>
-  <a href="#contact" class="btn contact"></a>
-  <a href="products.html" class="btn explore"></a>
+  <!-- HERO CONTENT -->
+  <div class="hero-content">
+    <h1>Professional Printing Services</h1>
+    <p>We provide high-quality printing, ID cards, visiting cards, and custom branding solutions.</p>
+    <a href="products.html" class="btn">Explore Products</a>
+  </div>
 
 </div>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  ✔ BULK ORDERS | ✔ FAST DELIVERY | ✔ BEST PRICE GUARANTEE
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card">🪪 ID Cards</div>
+    <div class="card">📄 Printing</div>
+    <div class="card">🏷️ Lanyards</div>
+    <div class="card">🎁 Custom Gifts</div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="section">
+  <h2>Popular Products</h2>
+
+  <div class="products">
+    <div class="product">
+      <h3>Lanyard + ID Card</h3>
+      <p>₹20 / piece</p>
+    </div>
+
+    <div class="product">
+      <h3>Visiting Card</h3>
+      <p>₹2 / piece</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>📞 9831102291</p>
+  <p>© 2026 Asirbad Creation</p>
+</footer>
 
 </body>
 </html>
