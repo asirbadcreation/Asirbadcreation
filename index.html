@@ -1,219 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Asirbad Creation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asirbad Creation</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-}
+        body {
+            color: white;
+        }
 
-/* HERO IMAGE (NO CROPPING EVER) */
-.hero {
-  position: relative;
-  width: 100%;
-}
+        /* HERO BACKGROUND */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background: url('background.png') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+        }
 
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+        /* DARK OVERLAY */
+        .overlay {
+            background: rgba(0,0,0,0.55);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-/* NAVBAR (POSITIONED OVER IMAGE) */
-.nav {
-  position: absolute;
-  top: 30px;
-  right: 60px;
-  display: flex;
-  gap: 30px;
-  font-weight: 600;
-}
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
 
-.nav a {
-  text-decoration: none;
-  color: #333;
-}
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
-/* HERO CONTENT BOX */
-.hero-content {
-  position: absolute;
-  top: 55%;
-  left: 8%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(12px);
-  padding: 40px;
-  border-radius: 20px;
-  width: 400px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-}
+        .nav-links a {
+            color: white;
+            margin-left: 25px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
 
-.hero-content h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
+        .nav-links a:hover {
+            color: #ffd700;
+        }
 
-.hero-content p {
-  margin-bottom: 20px;
-  color: #333;
-}
+        /* CONTENT */
+        .content {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: 120px;
+            padding: 0 20px;
+        }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
-  background: black;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-}
+        .content h1 {
+            font-size: 52px;
+            letter-spacing: 3px;
+        }
 
-.btn:hover {
-  background: #333;
-}
+        .content p {
+            margin-top: 15px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
 
-/* TRUST BAR */
-.trust {
-  background: rgba(0,0,0,0.85);
-  color: white;
-  text-align: center;
-  padding: 12px;
-  font-size: 14px;
-}
+        /* BUTTONS */
+        .buttons {
+            margin-top: 35px;
+        }
 
-/* SECTION */
-.section {
-  padding: 80px 20px;
-  text-align: center;
-  background: #f5f5f5;
-}
+        .btn {
+            padding: 14px 28px;
+            margin: 10px;
+            border: none;
+            background: #ffd700;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 6px;
+            font-size: 15px;
+        }
 
-/* SERVICES */
-.services {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
 
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  width: 180px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
+        /* SCROLL SECTION */
+        .products-preview {
+            height: 100vh;
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
 
-/* PRODUCTS */
-.products {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
+        /* MOBILE RESPONSIVE */
+        @media(max-width: 768px) {
+            .content h1 {
+                font-size: 36px;
+            }
 
-.product {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  width: 250px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+            .navbar {
+                padding: 15px 20px;
+            }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #fff;
-}
+            .nav-links a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+        }
 
-/* MOBILE */
-@media(max-width: 768px) {
-  .hero-content {
-    width: 90%;
-    left: 5%;
-    top: 60%;
-  }
-
-  .nav {
-    right: 20px;
-    gap: 15px;
-  }
-}
-</style>
+    </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="background.jpg.png" alt="Asirbad Creation">
+    <div class="hero">
+        <div class="overlay">
 
-  <!-- NAV -->
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="https://wa.me/919831102291" target="_blank">Contact</a>
-  </div>
+            <!-- NAVBAR -->
+            <div class="navbar">
+                <div class="logo">Asirbad Creation</div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="https://wa.me/919831102291" target="_blank">Contact</a>
+                </div>
+            </div>
 
-  <!-- HERO BOX -->
-  <div class="hero-content">
-    <h1>Professional Printing Services</h1>
-    <p>We provide high-quality printing, ID cards, visiting cards, and custom branding solutions.</p>
-    <a href="products.html" class="btn">Explore Products</a>
-  </div>
-</div>
+            <!-- MAIN CONTENT -->
+            <div class="content">
+                <h1>Print Your Mark</h1>
+                <p>Premium Custom Printing Solutions</p>
 
-<!-- TRUST BAR -->
-<div class="trust">
-  ✔ BULK ORDERS | ✔ FAST DELIVERY | ✔ BEST PRICE GUARANTEE
-</div>
+                <div class="buttons">
+                    <button class="btn" onclick="location.href='products.html'">
+                        Explore Products
+                    </button>
 
-<!-- SERVICES -->
-<div class="section">
-  <h2>Our Services</h2>
+                    <button class="btn" onclick="window.open('https://wa.me/919831102291')">
+                        Order on WhatsApp
+                    </button>
+                </div>
+            </div>
 
-  <div class="services">
-    <div class="card">🪪 ID Cards</div>
-    <div class="card">📄 Printing</div>
-    <div class="card">🏷️ Lanyards</div>
-    <div class="card">🎁 Custom Gifts</div>
-  </div>
-</div>
-
-<!-- PRODUCTS -->
-<div class="section">
-  <h2>Popular Products</h2>
-
-  <div class="products">
-    <div class="product">
-      <h3>Lanyard + ID Card</h3>
-      <p>₹20 / piece</p>
+        </div>
     </div>
 
-    <div class="product">
-      <h3>Visiting Card</h3>
-      <p>₹2 / piece</p>
+    <!-- NEXT SECTION -->
+    <div class="products-preview">
+        Coming Soon: Our Products
     </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <p>📞 9831102291</p>
-  <p>© 2026 Asirbad Creation</p>
-</footer>
 
 </body>
 </html>
