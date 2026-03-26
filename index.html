@@ -16,71 +16,82 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* HERO IMAGE */
+/* HERO */
 .hero {
-  position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.hero img {
+.hero-wrapper {
+  position: relative;
   width: 100%;
-  height: auto;   /* ✅ FULL IMAGE, NO CROPPING */
+  max-width: 1400px;
+}
+
+.hero-wrapper img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
 /* NAVBAR */
 .nav {
   position: absolute;
-  top: 30px;
-  right: 60px;
+  top: 7%;
+  right: 5%;
   display: flex;
-  gap: 30px;
+  gap: 2vw;
   font-weight: 600;
-  z-index: 10;
 }
 
 .nav a {
   text-decoration: none;
   color: #222;
+  font-size: 1vw;
   transition: 0.3s;
 }
 
 .nav a:hover {
-  color: #000;
+  color: black;
 }
 
-/* HERO CONTENT BOX */
+/* HERO CONTENT (PIXEL MATCHED) */
 .hero-content {
   position: absolute;
-  bottom: 80px;   /* 🔥 anchors it nicely */
-  left: 8%;
-  background: rgba(255,255,255,0.6);
+  top: 63%;
+  left: 6%;
+  transform: translateY(-50%);
+  width: 32%;
+
+  background: rgba(255,255,255,0.65);
   backdrop-filter: blur(14px);
-  padding: 40px;
-  border-radius: 20px;
-  width: 420px;
+  padding: 2.2vw;
+  border-radius: 18px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.25);
 }
+
 .hero-content h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 1.9vw;
+  line-height: 1.2;
 }
 
 .hero-content p {
-  margin-bottom: 25px;
+  font-size: 0.95vw;
+  margin: 0.8vw 0 1.2vw;
   color: #333;
-  line-height: 1.5;
 }
 
 /* BUTTONS */
 .btn {
   display: inline-block;
-  padding: 12px 22px;
+  padding: 0.8vw 1.4vw;
   background: black;
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  margin-right: 10px;
+  margin-right: 0.5vw;
+  font-size: 0.9vw;
   transition: 0.3s;
 }
 
@@ -99,7 +110,7 @@ body {
 
 /* SECTION */
 .section {
-  padding: 90px 20px;
+  padding: 80px 20px;
   text-align: center;
   background: #f5f5f5;
 }
@@ -110,20 +121,15 @@ body {
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .card {
   background: white;
   padding: 25px;
   border-radius: 15px;
-  width: 180px;
+  width: 200px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
 }
 
 /* PRODUCTS */
@@ -132,7 +138,7 @@ body {
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .product {
@@ -141,35 +147,45 @@ body {
   border-radius: 15px;
   width: 250px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.product:hover {
-  transform: translateY(-8px);
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
-  background: #fff;
 }
 
 /* MOBILE */
 @media(max-width: 768px) {
-  .hero {
-    height: 80vh;
+
+  .nav {
+    top: 4%;
+    right: 5%;
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 12px;
   }
 
   .hero-content {
+    position: static;
+    transform: none;
     width: 90%;
-    left: 5%;
-    top: 55%;
+    margin: 20px auto;
   }
 
-  .nav {
-    right: 20px;
-    gap: 15px;
+  .hero-content h1 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 10px 16px;
   }
 }
 </style>
@@ -179,27 +195,31 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-  <!-- ✅ FIXED IMAGE NAME -->
-  <img src="background.png" alt="Asirbad Creation">
+  <div class="hero-wrapper">
 
-  <!-- NAV -->
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="https://wa.me/919831102291" target="_blank">Contact</a>
-  </div>
+    <!-- IMPORTANT: file must exist -->
+    <img src="background.png" alt="Asirbad Creation">
 
-  <!-- HERO BOX -->
-  <div class="hero-content">
-    <h1>Professional Printing Services</h1>
-    <p>We provide high-quality printing, ID cards, visiting cards, and custom branding solutions.</p>
+    <!-- NAV -->
+    <div class="nav">
+      <a href="#">Home</a>
+      <a href="products.html">Products</a>
+      <a href="https://wa.me/919831102291" target="_blank">Contact</a>
+    </div>
 
-    <a href="products.html" class="btn">Explore Products</a>
-    <a href="https://wa.me/919831102291" class="btn">Order Now</a>
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+      <h1>Professional Printing Services</h1>
+      <p>We provide high-quality printing, ID cards, visiting cards, and custom branding solutions.</p>
+
+      <a href="products.html" class="btn">Explore Products</a>
+      <a href="https://wa.me/919831102291" class="btn">Order Now</a>
+    </div>
+
   </div>
 </div>
 
-<!-- TRUST BAR -->
+<!-- TRUST -->
 <div class="trust">
   ✔ BULK ORDERS | ✔ FAST DELIVERY | ✔ BEST PRICE GUARANTEE
 </div>
