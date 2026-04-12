@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #eef2f7, #e3e9f0);
+    background: #ffffff;
 }
 
 /* NAVBAR */
@@ -26,96 +26,81 @@ body {
     color: white;
     margin-left: 20px;
     text-decoration: none;
-    font-weight: 500;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    margin: 30px 0 10px;
+    font-size: 26px;
+    font-weight: 600;
 }
 
 /* SEARCH */
 .search-box {
     text-align: center;
-    margin: 30px;
+    margin-bottom: 20px;
 }
 
 .search-box input {
     width: 60%;
-    padding: 14px;
-    border-radius: 30px;
-    border: none;
-    font-size: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 15px;
 }
 
-/* PRODUCTS GRID */
+/* PRODUCTS */
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 30px;
 }
 
 /* CARD */
 .card {
     background: white;
-    border-radius: 18px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    transition: 0.35s;
-    position: relative;
+    border: 1px solid #eee;
+    transition: 0.25s;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-5px);
 }
 
-/* BADGE */
-.badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: black;
-    color: white;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 20px;
-}
-
-/* IMAGE */
 .card img {
     width: 100%;
-    height: 210px;
+    height: 180px;
     object-fit: cover;
 }
 
-/* CONTENT */
 .card-content {
-    padding: 18px;
+    padding: 15px;
 }
 
 .card h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* PRICE */
 .price {
-    color: #0a8f2f;
+    margin: 8px 0;
     font-weight: bold;
-    margin: 12px 0;
 }
 
 /* BUTTON */
 .btn {
     display: inline-block;
-    padding: 10px 16px;
+    padding: 8px 14px;
     background: black;
     color: white;
-    border-radius: 25px;
+    border-radius: 20px;
     text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #333;
+    font-size: 13px;
 }
 </style>
 </head>
@@ -131,21 +116,23 @@ body {
     </div>
 </div>
 
+<!-- TITLE -->
+<div class="title">Our Products</div>
+
 <!-- SEARCH -->
 <div class="search-box">
     <input type="text" id="searchInput" placeholder="Search products...">
 </div>
 
 <!-- PRODUCTS -->
-<div class="products" id="productList">
+<div class="products">
 
     <div class="card">
-        <div class="badge">Popular</div>
         <img src="https://i.postimg.cc/VNHvX01b/bill-book.jpg">
         <div class="card-content">
             <h3>Custom Bill Book Printing</h3>
             <div class="price">₹119 onwards</div>
-            <a href="https://wa.me/91YOURNUMBER?text=I want Custom Bill Book Printing" class="btn">Order Now</a>
+            <a href="https://wa.me/9831102291?text=I want Custom Bill Book Printing" class="btn">Order</a>
         </div>
     </div>
 
@@ -154,17 +141,16 @@ body {
         <div class="card-content">
             <h3>Calendar Printing</h3>
             <div class="price">₹139 onwards</div>
-            <a href="https://wa.me/91YOURNUMBER?text=I want Calendar Printing" class="btn">Order Now</a>
+            <a href="https://wa.me/9831102291?text=I want Calendar Printing" class="btn">Order</a>
         </div>
     </div>
 
     <div class="card">
-        <div class="badge">Best Seller</div>
         <img src="https://i.postimg.cc/rmXX6q9F/visiting-card.jpg">
         <div class="card-content">
             <h3>Visiting Card (100 pcs)</h3>
             <div class="price">₹119</div>
-            <a href="https://wa.me/91YOURNUMBER?text=I want Visiting Card (100 pcs)" class="btn">Order Now</a>
+            <a href="https://wa.me/9831102291?text=I want Visiting Card" class="btn">Order</a>
         </div>
     </div>
 
@@ -173,7 +159,7 @@ body {
         <div class="card-content">
             <h3>Self Ink Stamp</h3>
             <div class="price">₹349 - ₹399</div>
-            <a href="https://wa.me/919831102291?text=I want Self Ink Stamp" class="btn">Order Now</a>
+            <a href="https://wa.me/9831102291?text=I want Self Ink Stamp" class="btn">Order</a>
         </div>
     </div>
 
@@ -181,8 +167,8 @@ body {
         <img src="https://i.postimg.cc/Dy2hyy3f/lanyard.jpg">
         <div class="card-content">
             <h3>ID Card / Lanyard Printing</h3>
-            <div class="price"> ₹25-₹250 </div>
-            <a href="https://wa.me/91YOURNUMBER?text=I want ID Card / Lanyard Printing" class="btn">Order Now</a>
+            <div class="price">₹25 - ₹250</div>
+            <a href="https://wa.me/9831102291?text=I want ID Card / Lanyard" class="btn">Order</a>
         </div>
     </div>
 
