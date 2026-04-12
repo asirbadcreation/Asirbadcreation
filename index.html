@@ -181,7 +181,7 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
   }
 }
 
-/* MOBILE */
+/* EXISTING MOBILE (UNCHANGED) */
 @media(max-width:768px){
   .hero-content,
   .inside-content{
@@ -196,6 +196,85 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
     justify-content:center;
     margin-top:10px;
   }
+}
+
+/* 🔥 NEW MOBILE FIX (ADDED ONLY) */
+@media(max-width:768px){
+
+  .hero img{
+    height:300px;
+    object-fit:cover;
+  }
+
+  .nav{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .nav-search{
+    width:100%;
+    max-width:250px;
+  }
+
+  .hero-content{
+    padding:20px;
+    border-radius:14px;
+  }
+
+  .hero-content h1{
+    font-size:22px;
+  }
+
+  .hero-content p{
+    font-size:13px;
+  }
+
+  .btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    margin-top:8px;
+  }
+
+  .services{
+    gap:10px;
+  }
+
+  .card{
+    width:45%;
+    font-size:12px;
+  }
+
+  .products{
+    gap:10px;
+  }
+
+  .product{
+    width:45%;
+    font-size:13px;
+  }
+
+  .contact{
+    font-size:14px;
+  }
+}
+
+/* EXTRA SMALL */
+@media(max-width:480px){
+
+  .hero img{
+    height:250px;
+  }
+
+  .card,
+  .product{
+    width:100%;
+  }
+
+  .hero-content h1{
+    font-size:20px;
+  }
+
 }
 </style>
 </head>
@@ -243,8 +322,8 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
     </div>
 
     <div class="product">
-      <h3>Visiting Card </h3>
-      <p>₹120 / 100pieces </p>
+      <h3>Visiting Card</h3>
+      <p>₹120 / 100 pieces</p>
     </div>
   </div>
 
