@@ -1,95 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Our Products - Asirbad Creation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Asirbad Creation</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #f5f5f5;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+}
 
-    header {
-      background: #111;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: black;
+    color: white;
+}
 
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 30px;
-    }
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-    .product-card {
-      background: white;
-      width: 260px;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
+/* SEARCH BAR */
+.search-box {
+    text-align: center;
+    margin: 30px;
+}
 
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
+.search-box input {
+    width: 60%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-    .product-card img {
-      width: 100%;
-      border-radius: 10px;
-    }
+/* PRODUCTS GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
 
-    .price {
-      font-weight: bold;
-      margin: 10px 0;
-    }
+/* CARD */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
 
-    .btn {
-      padding: 10px 15px;
-      background: green;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-    }
-  </style>
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Our Products</h1>
-  <p>Asirbad Creation</p>
-</header>
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>Asirbad Creation</h2>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+    </div>
+</div>
 
-<div class="products">
+<!-- SEARCH -->
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search products...">
+</div>
 
-  <div class="product-card">
-    <img src="https://via.placeholder.com/250">
-    <h3>Visiting Cards</h3>
-    <p class="price">₹120 / 100 cards</p>
-    <a class="btn" href="https://wa.me/919831102291?text=I want Visiting Cards">
-      Order on WhatsApp
-    </a>
-  </div>
+<!-- PRODUCTS -->
+<div class="products" id="productList">
 
+    <div class="card">
+        <img src="https://i.postimg.cc/VNHvX01b/bill-book.jpg">
+        <div class="card-content">
+            <h3>Custom Bill Book Printing</h3>
+            <div class="price">₹119 onwards</div>
+            <a href="#" class="btn">Order Now</a>
+        </div>
+    </div>
 
+    <div class="card">
+        <img src="https://i.postimg.cc/9QgCk3S4/calender.jpg">
+        <div class="card-content">
+            <h3>Calendar Printing</h3>
+            <div class="price">₹139 onwards</div>
+            <a href="#" class="btn">Order Now</a>
+        </div>
+    </div>
 
-  <div class="product-card">
-    <img src="https://via.placeholder.com/250">
-    <h3>ID Card + Lanyard </h3>
-    <p class="price">₹20 per piece</p>
-    <a class="btn" href="https://wa.me/919831102291?text=I want ID Card">
-      Order on WhatsApp
-    </a>
-  </div>
+    <div class="card">
+        <img src="https://i.postimg.cc/rmXX6q9F/visiting-card.jpg">
+        <div class="card-content">
+            <h3>Visiting Card (100 pcs)</h3>
+            <div class="price">₹119</div>
+            <a href="#" class="btn">Order Now</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://i.postimg.cc/j5scn9xh/Whats-App-Image-2026-04-03-at-9-33-40-PM.jpg">
+        <div class="card-content">
+            <h3>Self Ink Stamp</h3>
+            <div class="price">₹349 - ₹399</div>
+            <a href="#" class="btn">Order Now</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://i.postimg.cc/Dy2hyy3f/lanyard.jpg">
+        <div class="card-content">
+            <h3>ID Card / Lanyard Printing</h3>
+            <div class="price">Contact for Price</div>
+            <a href="#" class="btn">Order Now</a>
+        </div>
+    </div>
 
 </div>
+
+<!-- SEARCH SCRIPT -->
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("keyup", function() {
+    let filter = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(filter) ? "block" : "none";
+    });
+});
+</script>
 
 </body>
 </html>
