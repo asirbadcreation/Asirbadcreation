@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fa;
+    background: linear-gradient(135deg, #eef2f7, #e3e9f0);
 }
 
 /* NAVBAR */
@@ -29,7 +29,7 @@ body {
     font-weight: 500;
 }
 
-/* SEARCH BAR */
+/* SEARCH */
 .search-box {
     text-align: center;
     margin: 30px;
@@ -37,43 +37,57 @@ body {
 
 .search-box input {
     width: 60%;
-    padding: 12px;
+    padding: 14px;
     border-radius: 30px;
     border: none;
-    outline: none;
     font-size: 16px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* PRODUCTS GRID */
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
     padding: 40px;
 }
 
 /* CARD */
 .card {
     background: white;
-    border-radius: 15px;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.35s;
+    position: relative;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.02);
 }
 
+/* BADGE */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+/* IMAGE */
 .card img {
     width: 100%;
-    height: 200px;
+    height: 210px;
     object-fit: cover;
 }
 
+/* CONTENT */
 .card-content {
-    padding: 15px;
+    padding: 18px;
 }
 
 .card h3 {
@@ -81,19 +95,20 @@ body {
     font-size: 18px;
 }
 
+/* PRICE */
 .price {
-    color: green;
+    color: #0a8f2f;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
 /* BUTTON */
 .btn {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 16px;
     background: black;
     color: white;
-    border-radius: 20px;
+    border-radius: 25px;
     text-decoration: none;
     font-size: 14px;
     transition: 0.3s;
@@ -125,11 +140,12 @@ body {
 <div class="products" id="productList">
 
     <div class="card">
+        <div class="badge">Popular</div>
         <img src="https://i.postimg.cc/VNHvX01b/bill-book.jpg">
         <div class="card-content">
             <h3>Custom Bill Book Printing</h3>
             <div class="price">₹119 onwards</div>
-            <a href="#" class="btn">Order Now</a>
+            <a href="https://wa.me/91YOURNUMBER?text=I want Custom Bill Book Printing" class="btn">Order Now</a>
         </div>
     </div>
 
@@ -138,16 +154,17 @@ body {
         <div class="card-content">
             <h3>Calendar Printing</h3>
             <div class="price">₹139 onwards</div>
-            <a href="#" class="btn">Order Now</a>
+            <a href="https://wa.me/91YOURNUMBER?text=I want Calendar Printing" class="btn">Order Now</a>
         </div>
     </div>
 
     <div class="card">
+        <div class="badge">Best Seller</div>
         <img src="https://i.postimg.cc/rmXX6q9F/visiting-card.jpg">
         <div class="card-content">
             <h3>Visiting Card (100 pcs)</h3>
             <div class="price">₹119</div>
-            <a href="#" class="btn">Order Now</a>
+            <a href="https://wa.me/91YOURNUMBER?text=I want Visiting Card (100 pcs)" class="btn">Order Now</a>
         </div>
     </div>
 
@@ -156,7 +173,7 @@ body {
         <div class="card-content">
             <h3>Self Ink Stamp</h3>
             <div class="price">₹349 - ₹399</div>
-            <a href="#" class="btn">Order Now</a>
+            <a href="https://wa.me/919831102291?text=I want Self Ink Stamp" class="btn">Order Now</a>
         </div>
     </div>
 
@@ -164,8 +181,8 @@ body {
         <img src="https://i.postimg.cc/Dy2hyy3f/lanyard.jpg">
         <div class="card-content">
             <h3>ID Card / Lanyard Printing</h3>
-            <div class="price">Contact for Price</div>
-            <a href="#" class="btn">Order Now</a>
+            <div class="price"> ₹25-₹250 </div>
+            <a href="https://wa.me/91YOURNUMBER?text=I want ID Card / Lanyard Printing" class="btn">Order Now</a>
         </div>
     </div>
 
