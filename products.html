@@ -6,6 +6,10 @@
 <title>Products | Asirbad Creation</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -13,30 +17,58 @@ body {
 }
 
 /* NAVBAR */
-<div class="navbar">
-    <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="logo.png" alt="logo" style="height: 35px;">
-        <h2 style="margin: 0;">Asirbad Creation</h2>
-    </div>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: black;
+    color: white;
+}
 
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-    </div>
-</div>
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 32px;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
 }
 
 .nav-links a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+
+/* ACTIVE LINK */
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -4px;
 }
 
 /* TITLE */
 .title {
     text-align: center;
     margin: 30px 0 10px;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -48,10 +80,11 @@ body {
 
 .search-box input {
     width: 60%;
+    max-width: 400px;
     padding: 12px;
     border-radius: 25px;
     border: 1px solid #ddd;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 /* PRODUCTS */
@@ -90,7 +123,6 @@ body {
     font-size: 16px;
 }
 
-/* PRICE */
 .price {
     margin: 8px 0;
     font-weight: bold;
@@ -106,6 +138,38 @@ body {
     text-decoration: none;
     font-size: 13px;
 }
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .logo span {
+        font-size: 15px;
+    }
+
+    .logo img {
+        height: 26px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .search-box input {
+        width: 90%;
+    }
+
+}
 </style>
 </head>
 
@@ -113,10 +177,14 @@ body {
 
 <!-- NAVBAR -->
 <div class="navbar">
-    <h2>Asirbad Creation</h2>
+    <div class="logo">
+        <img src="logo.png" alt="logo">
+        <span>Asirbad Creation</span>
+    </div>
+
     <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
+        <a href="products.html" class="active">Products</a>
     </div>
 </div>
 
