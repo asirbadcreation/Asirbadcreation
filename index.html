@@ -2,300 +2,66 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Asirbad Creation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Asirbad Creation</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
-
-/* HERO */
-.hero{
-  position:relative;
-  width:100%;
-}
-
-/* DESKTOP IMAGE */
-.hero-img-desktop{
-  width:100%;
-  display:block;
-}
-
-/* MOBILE IMAGE */
-.hero-img-mobile{
-  display:none;
-  width:100%;
-}
-
-/* NAV */
-.nav{
-  position:absolute;
-  top:5%;
-  right:6%;
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
   display:flex;
+  justify-content:center;
   align-items:center;
-  gap:20px;
-  z-index:2;
+  height:100vh;
+  background:#000;
+  color:white;
+  text-align:center;
 }
 
-.nav a{
-  text-decoration:none;
-  color:#222;
-  font-weight:500;
+.container{
+  max-width:500px;
+  padding:20px;
 }
 
-.nav-search{
-  padding:6px 14px;
-  border-radius:20px;
-  border:none;
-  outline:none;
-  width:150px;
-  background:rgba(255,255,255,0.8);
-}
-
-/* HERO CARD (DESKTOP ONLY STYLE) */
-.hero-content{
-  position:absolute;
-  top:40%;
-  left:6%;
-  transform:translateY(-50%);
-  width:36%;
-  min-width:300px;
-
-  background:rgba(255,255,255,0.55);
-  backdrop-filter:blur(18px);
-
-  padding:34px;
-  border-radius:20px;
-
-  box-shadow:0 25px 80px rgba(0,0,0,0.35);
-}
-
-.hero-content h1{
-  font-size:30px;
+h1{
+  font-size:32px;
   margin-bottom:10px;
 }
 
-.hero-content p{
-  font-size:14px;
-  margin-bottom:12px;
+p{
+  font-size:16px;
+  color:#ccc;
 }
 
-/* BUTTON */
-.btn{
+.date{
+  margin-top:15px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.whatsapp{
+  margin-top:20px;
   display:inline-block;
   padding:10px 20px;
-  background:black;
-  color:white;
-  border-radius:8px;
+  background:white;
+  color:black;
+  border-radius:25px;
   text-decoration:none;
-  margin-top:10px;
+  font-size:14px;
 }
-
-/* INSIDE CONTENT (DESKTOP) */
-.inside-content{
-  position:absolute;
-  top:68%;
-  width:100%;
-  text-align:center;
-  padding:0 20px;
-}
-
-.services{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-  margin-bottom:25px;
-}
-
-.card{
-  background:rgba(255,255,255,0.7);
-  padding:12px 18px;
-  border-radius:10px;
-}
-
-.products{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-}
-
-.product{
-  background:rgba(255,255,255,0.75);
-  padding:15px;
-  border-radius:12px;
-  width:160px;
-}
-
-/* ================= MOBILE ================= */
-@media(max-width:768px){
-
-  body{
-    background:#f5f5f5;
-  }
-
-  /* SWITCH IMAGES */
-  .hero-img-desktop{
-    display:none;
-  }
-
-  .hero-img-mobile{
-    display:block;
-  }
-
-  /* NAV → NORMAL TOP BAR */
-  .nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:white;
-    padding:12px 15px;
-    justify-content:space-between;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-  }
-
-  .nav a{
-    font-size:13px;
-  }
-
-  .nav-search{
-    width:90px;
-  }
-
-  /* REMOVE ALL OVERLAY */
-  .hero-content{
-    position:relative;
-    top:auto;
-    left:auto;
-    transform:none;
-    width:92%;
-    margin:15px auto;
-    text-align:center;
-    padding:20px;
-  }
-
-  .hero-content h1{
-    font-size:22px;
-  }
-
-  .hero-content p{
-    font-size:13px;
-  }
-
-  /* CONTENT FLOW */
-  .inside-content{
-    position:relative;
-    top:auto;
-    margin-top:10px;
-    padding:10px;
-  }
-
-  .inside-content h2{
-    margin:15px 0 10px;
-  }
-
-  /* SERVICES GRID */
-  .services{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
-
-  .card{
-    background:white;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  /* PRODUCTS SCROLL */
-  .products{
-    display:flex;
-    overflow-x:auto;
-    gap:10px;
-  }
-
-  .product{
-    min-width:140px;
-    background:white;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  /* PUSH IMAGE BELOW NAV */
-  .hero{
-    margin-top:60px;
-  }
-}
-
 </style>
 </head>
 
 <body>
 
-<div class="hero">
+<div class="container">
+  <h1>🚧 Website Under Maintenance</h1>
+  <p>We are preparing something amazing for you.</p>
+  
+  <div class="date">Launching on 16 April 🚀</div>
 
-<!-- DESKTOP IMAGE -->
-<img src="template.png" class="hero-img-desktop">
-
-<!-- MOBILE IMAGE -->
-<img src="template-mobile.jpg" class="hero-img-mobile">
-
-<!-- NAV -->
-<div class="nav">
-  <a href="#">Home</a>
-  <a href="products.html">Products</a>
-  <a href="https://wa.me/919831102291">Contact</a>
-  <input type="text" placeholder="Search..." class="nav-search" onclick="goToProducts()">
+  <a href="https://wa.me/919831102291" class="whatsapp">Contact on WhatsApp</a>
 </div>
-
-<!-- HERO -->
-<div class="hero-content">
-  <h1>Professional Printing Services</h1>
-  <p>We provide high-quality printing, ID cards, visiting cards, and custom branding solutions.</p>
-
-  <a href="products.html" class="btn">Explore Products</a>
-  <a href="https://wa.me/919831102291" class="btn">Order Now</a>
-</div>
-
-<!-- CONTENT -->
-<div class="inside-content">
-
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">🪪 ID Cards</div>
-    <div class="card">📄 Printing</div>
-    <div class="card">🏷️ Lanyards</div>
-    <div class="card">🎁 Custom Gifts</div>
-  </div>
-
-  <h2>Popular Products</h2>
-  <div class="products">
-    <div class="product">
-      <h3>Lanyard + ID Card</h3>
-      <p>₹20 / piece</p>
-    </div>
-
-    <div class="product">
-      <h3>Visiting Card</h3>
-      <p>₹120 / 100 pieces</p>
-    </div>
-  </div>
-
-  <div class="contact">📞 9831102291</div>
-
-</div>
-
-</div>
-
-<script>
-function goToProducts(){
-  window.location.href = "products.html";
-}
-</script>
 
 </body>
 </html>
