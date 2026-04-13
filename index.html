@@ -11,6 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
 
+/* HERO */
 .hero{position:relative;width:100%;}
 .hero img{width:100%;display:block;}
 
@@ -64,30 +65,24 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
 
   background:rgba(255,255,255,0.55);
   backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
 
   padding:34px;
   border-radius:20px;
 
   box-shadow:0 25px 80px rgba(0,0,0,0.35);
-  border:1px solid rgba(255,255,255,0.3);
-
-  animation:fadeUp 1s ease;
 }
 
 .hero-content h1{
   font-size:30px;
-  font-weight:600;
   margin-bottom:10px;
 }
 
 .hero-content p{
   font-size:14px;
-  color:#333;
   margin-bottom:12px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn{
   display:inline-block;
   padding:10px 20px;
@@ -96,16 +91,10 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
   border-radius:8px;
   text-decoration:none;
   margin-top:10px;
-  transition:0.3s;
+  margin-right:8px;
 }
 
-.btn:hover{
-  background:#333;
-  transform:translateY(-2px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.3);
-}
-
-/* INSIDE CONTENT */
+/* INSIDE CONTENT (DESKTOP) */
 .inside-content{
   position:absolute;
   top:68%;
@@ -114,12 +103,6 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
   padding:0 20px;
 }
 
-.inside-content h2{
-  font-size:20px;
-  margin-bottom:10px;
-}
-
-/* SERVICES */
 .services{
   display:flex;
   justify-content:center;
@@ -129,20 +112,11 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
 }
 
 .card{
-  background:rgba(255,255,255,0.9);
-  padding:12px;
-  border-radius:12px;
-  width:140px;
-  font-size:13px;
-  transition:0.3s;
+  background:rgba(255,255,255,0.7);
+  padding:12px 18px;
+  border-radius:10px;
 }
 
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 25px rgba(0,0,0,0.25);
-}
-
-/* PRODUCTS */
 .products{
   display:flex;
   justify-content:center;
@@ -151,52 +125,118 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
 }
 
 .product{
-  background:rgba(255,255,255,0.95);
-  padding:12px;
+  background:rgba(255,255,255,0.75);
+  padding:15px;
   border-radius:12px;
   width:160px;
-  transition:0.3s;
 }
 
-.product:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 25px rgba(0,0,0,0.25);
-}
-
-/* CONTACT */
-.contact{
-  margin-top:15px;
-  font-weight:600;
-}
-
-/* ANIMATION */
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(40px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(-50%);
-  }
-}
-
-/* MOBILE */
+/* ========================= */
+/* 📱 MOBILE (COMPLETELY NEW UI) */
+/* ========================= */
 @media(max-width:768px){
-  .hero-content,
-  .inside-content{
-    position:static;
-    transform:none;
-    width:90%;
-    margin:20px auto;
+
+  body{
+    background:#f5f5f5;
   }
 
+  /* REMOVE OVERLAY STYLE */
+  .hero{
+    position:relative;
+  }
+
+  .hero img{
+    width:100%;
+    height:auto;
+  }
+
+  /* NAV → SIMPLE BAR */
   .nav{
-    position:static;
-    justify-content:center;
-    margin-top:10px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:white;
+    justify-content:space-between;
+    padding:12px 15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav a{
+    font-size:13px;
+  }
+
+  .nav-search{
+    width:90px;
+  }
+
+  /* HERO CARD → BELOW IMAGE */
+  .hero-content{
+    position:relative;
+    top:auto;
+    left:auto;
+    transform:none;
+    width:92%;
+    margin:80px auto 15px auto;
+    text-align:center;
+  }
+
+  .hero-content h1{
+    font-size:22px;
+  }
+
+  .hero-content p{
+    font-size:13px;
+  }
+
+  /* CONTENT FLOW */
+  .inside-content{
+    position:relative;
+    top:auto;
+    padding:10px;
+  }
+
+  .inside-content h2{
+    margin:15px 0 10px;
+    font-size:18px;
+  }
+
+  /* SERVICES GRID */
+  .services{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .card{
+    padding:12px;
+    font-size:13px;
+    text-align:center;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  /* PRODUCTS SCROLL */
+  .products{
+    display:flex;
+    overflow-x:auto;
+    gap:10px;
+    padding:10px 0;
+  }
+
+  .product{
+    min-width:140px;
+    flex-shrink:0;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .contact{
+    margin-top:15px;
+    font-size:13px;
   }
 }
+
 </style>
 </head>
 
@@ -211,7 +251,6 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
   <a href="#">Home</a>
   <a href="products.html">Products</a>
   <a href="https://wa.me/919831102291">Contact</a>
-
   <input type="text" placeholder="Search..." class="nav-search" onclick="goToProducts()">
 </div>
 
@@ -243,8 +282,8 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
     </div>
 
     <div class="product">
-      <h3>Visiting Card </h3>
-      <p>₹120 / 100pieces </p>
+      <h3>Visiting Card</h3>
+      <p>₹120 / 100 pieces</p>
     </div>
   </div>
 
@@ -257,11 +296,6 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
 <script>
 function goToProducts(){
   window.location.href = "products.html";
-}
-</script>
-
-</body>
-</html>
 }
 </script>
 
