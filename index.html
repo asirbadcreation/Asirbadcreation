@@ -55,7 +55,7 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
   background:rgba(255,255,255,0.8);
 }
 
-/* HERO CARD */
+/* HERO CARD (DESKTOP ONLY STYLE) */
 .hero-content{
   position:absolute;
   top:40%;
@@ -94,7 +94,7 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
   margin-top:10px;
 }
 
-/* INSIDE CONTENT */
+/* INSIDE CONTENT (DESKTOP) */
 .inside-content{
   position:absolute;
   top:68%;
@@ -134,6 +134,10 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
 /* ================= MOBILE ================= */
 @media(max-width:768px){
 
+  body{
+    background:#f5f5f5;
+  }
+
   /* SWITCH IMAGES */
   .hero-img-desktop{
     display:none;
@@ -143,52 +147,72 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
     display:block;
   }
 
-  /* NAV */
+  /* NAV → NORMAL TOP BAR */
   .nav{
-    top:3%;
-    right:4%;
-    gap:10px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:white;
+    padding:12px 15px;
+    justify-content:space-between;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
   }
 
   .nav a{
-    font-size:12px;
+    font-size:13px;
   }
 
   .nav-search{
-    width:100px;
+    width:90px;
   }
 
-  /* HERO POSITION (IMPORTANT ALIGNMENT) */
+  /* REMOVE ALL OVERLAY */
   .hero-content{
-    top:70%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    width:90%;
+    position:relative;
+    top:auto;
+    left:auto;
+    transform:none;
+    width:92%;
+    margin:15px auto;
     text-align:center;
     padding:20px;
   }
 
   .hero-content h1{
-    font-size:20px;
+    font-size:22px;
   }
 
   .hero-content p{
-    font-size:12px;
+    font-size:13px;
   }
 
   /* CONTENT FLOW */
   .inside-content{
     position:relative;
     top:auto;
-    margin-top:20px;
+    margin-top:10px;
+    padding:10px;
   }
 
+  .inside-content h2{
+    margin:15px 0 10px;
+  }
+
+  /* SERVICES GRID */
   .services{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:10px;
   }
 
+  .card{
+    background:white;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  /* PRODUCTS SCROLL */
   .products{
     display:flex;
     overflow-x:auto;
@@ -197,6 +221,13 @@ body{font-family:'Poppins',sans-serif;overflow-x:hidden;}
 
   .product{
     min-width:140px;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  /* PUSH IMAGE BELOW NAV */
+  .hero{
+    margin-top:60px;
   }
 }
 
